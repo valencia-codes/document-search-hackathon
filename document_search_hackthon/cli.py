@@ -1,6 +1,11 @@
-from argparse import ArgumentParser
+import click
+@click.command()
+@click.option('--query', prompt='What would you like to know?')
 
-from .run_document_search import run_document_search
+def run_document_search(query):
+    # Run the document search in here
+    response = 'response'
+    click.echo(response)
 
 if __name__ == "__main__":
     run_document_search()
